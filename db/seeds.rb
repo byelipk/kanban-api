@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+TodoList.create([
+  {title: "Winnie", color: "#e8741e"},
+  {title: "Bob", color: "#35a59c"},
+  {title: "George", color: "#8e6395"},
+  {title: "Thomas", color: "#35a59c"}
+])
+
+Todo.create([
+  {task: "Eat", todo_list_id: 1},
+  {task: "Sleep", todo_list_id: 1},
+  {task: "Drink", todo_list_id: 1}
+])
