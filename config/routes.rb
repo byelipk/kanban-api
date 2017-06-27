@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :todo_lists, only: [:index]
-      resources :todos, only: [:update]
+      resources :todos, only: [:update, :create]
     end
   end
 end

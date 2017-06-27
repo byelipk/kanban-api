@@ -7,6 +7,15 @@ class Api::V1::TodosController < ApplicationController
     render json: todo, status: 200
   end
 
+  def create
+    todo_list = TodoList.find(todo_list_params[:id])
+    todo = todo_list.todos.build(todo_params[:attributes])
+
+    if todo.save
+      render json: todo, status: 201
+    end
+  end
+
   private
 
   def todo_params
